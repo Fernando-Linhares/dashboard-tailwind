@@ -13,18 +13,18 @@
         </style>
     </head>
     <body >
-        <div class="lg:flex md:flex sm:block justify-center relative top-30 bg-slate-50">
-            <div class="rounded border lg:h-full w-full">
+        <div class="lg:flex md:flex sm:block justify-center relative top-30 bg-slate-50 dark:bg-slate-900">
+            <div class="rounded  lg:h-full w-full">
                 <div class="grid grid-cols-4 " >
-                    <div class="col-span-4 bg-slate-900 p-3 fixed inset-x-0 top-0 z-10">
+                    <div class="col-span-4 bg-slate-900 p-3 fixed inset-x-0 top-0 z-10 dark:bg-slate-700">
                         <div class="text-white flex justify-between">
-                            <div class="p-1">
-                                Brand
+                            <div class="p-1 font-sans">
+                                4Peer
                             </div>
                             <div class="flex space-x-4">
-                                <button class="rounded hover:bg-slate-700  p-1 flex items-center">
+                                <button class="rounded hover:bg-slate-700  p-1 flex items-center" id="lightButton">
                                     <i class="material-icons">
-                                        brightness_2
+                                        wb_sunny
                                     </i>
                                 </button>
                                 <button class="rounded hover:bg-slate-700 p-1 flex items-center">
@@ -34,23 +34,33 @@
                                 </button>
                             </div>
                         </div>
-    
+                        <div class="max-sm:flex dark:text-white text-xs hidden">
+                            <div class="flex space-x-4 items-center  justify-between ">
+                                <div class="flex items-center space-x-4 justify-center cursor-pointer">
+                                    <div  id="perfil-mobile" class="bg-slate-700 mt-6 rounded-full h-12 w-12 flex items-center justify-center dark:bg-slate-800">
+                                        <i class="material-icons text-white text-lx">
+                                            person
+                                        </i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-span-1 p-2 bg-white">
-                        <div class="h-4/5 w-1/5 mt-20 fixed">
-                            <div class="flex items-center space-x-4 justify-center cursor-pointer">
-                                <div class="bg-slate-800 rounded-full h-12 w-12 flex items-center justify-center">
+                    <div class="col-span-1 p-2 bg-white max-sm:hidden " id="sideBar">
+                        <div class="h-4/5 w-1/5 mt-20 fixed dark:bg-stone-700">
+                            <div class="flex items-center space-x-4 justify-center cursor-pointer max-sm:hidden">
+                                <div class="bg-slate-700 rounded-full h-12 w-12 flex items-center justify-center">
                                     <i class="material-icons text-white text-lx">
                                         person
                                     </i>
                                 </div>
-                                <div class="text-sm font-sans">
+                                <div class="text-sm font-sans dark:text-white">
                                     User name
                                 </div>
                             </div>
 
                             <div class="mt-12 ml-6 text-xs">
-                                <div class="flex items-center space-x-4 m-1 p-2 pr-5 hover:bg-slate-100 rounded cursor-pointer">
+                                <div class="flex items-center space-x-4 m-1 p-2 pr-5 hover:bg-slate-100 rounded cursor-pointer dark:text-white dark:hover:bg-slate-700">
                                     <div>
                                         <i class="material-icons">
                                             pie_chart
@@ -58,7 +68,7 @@
                                     </div>
                                     <div class="">Dashboard</div>
                                 </div>
-                                <div id="balance" class="flex items-center space-x-4 m-1 p-2 pr-5 hover:bg-slate-100 rounded cursor-pointer">
+                                <div id="balance" class="flex items-center space-x-4 m-1 p-2 pr-5 hover:bg-slate-100 rounded cursor-pointer dark:text-white dark:hover:bg-slate-700">
                                     <div>
                                         <i class="material-icons">
                                             account_balance
@@ -67,8 +77,21 @@
                                     <div class="col-span-2">Account</div>
                                 </div>
 
-                                <div id="options" class="h-0 overflow-hidden transition-all	delay-150 ease-in-out">
-                                    <div class="flex items-center space-x-4 m-1 ml-5 p-2 pr-5 hover:bg-slate-100 rounded cursor-pointer">
+                                <div id="options" class="h-0 overflow-hidden transition-all	delay-150 ease-in-out dark:text-white">
+                                    <div class="
+                                        flex
+                                        items-center
+                                        space-x-4
+                                        m-1 ml-5
+                                        p-2 pr-5
+                                        hover:bg-slate-100
+                                        rounded
+                                        cursor-pointer
+                                        text-stone-600
+                                        dark:hover:bg-slate-700
+                                        dark:text-stone-300
+
+                                    ">
                                         <div>
                                             <i class="material-icons">
                                                 remove
@@ -76,7 +99,19 @@
                                         </div>
                                         <div class="col-span-2">Documentation</div>
                                     </div>
-                                    <div class="flex items-center space-x-4 m-1 ml-5 p-2 pr-5 hover:bg-slate-100 rounded cursor-pointer">
+                                    <div class="
+                                            flex
+                                            items-center
+                                            space-x-4
+                                            m-1 ml-5
+                                            p-2 pr-5
+                                            hover:bg-slate-100
+                                            rounded
+                                            cursor-pointer
+                                            text-stone-600
+                                            dark:hover:bg-slate-700
+                                            dark:text-stone-300
+                                        ">
                                         <div>
                                             <i class="material-icons">
                                                 remove
@@ -86,7 +121,7 @@
                                     </div>
                                 </div>
 
-                                <div class="flex items-center space-x-4 m-1 p-2 pr-5 hover:bg-slate-100 rounded cursor-pointer">
+                                <div class="flex items-center space-x-4 m-1 p-2 pr-5 hover:bg-slate-100 dark:hover:bg-slate-700 rounded cursor-pointer dark:text-white">
                                     <div>
                                         <i class="material-icons">
                                             attach_money
@@ -94,7 +129,7 @@
                                     </div>
                                     <div class="col-span-2">Wallet</div>
                                 </div>
-                                <div class="flex items-center space-x-4 m-1 p-2 pr-5 hover:bg-slate-100 rounded cursor-pointer">
+                                <div class="flex items-center space-x-4 m-1 p-2 pr-5 hover:bg-slate-100 dark:hover:bg-slate-700 rounded cursor-pointer dark:text-white">
                                     <div>
                                         <i class="material-icons">
                                             settings
@@ -105,12 +140,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-2 p-2 border rounded m-5 mt-20 bg-white" >
+                    <div class="col-span-2 p-2 border dark:text-white rounded m-5 mt-20 bg-white max-sm:col-span-4 max-sm:m-0 dark:bg-slate-800 dark:border-slate-800" >
                         <div style="height: 1300px;"></div>
                     </div>
-                    <div class="col-span-1 p-2 mt-20">
+                    <div class="col-span-1 p-2 mt-20 max-sm:hidden ">
                         
-                        <div class="border m-5 bg-white"><div style="height: 300px;"></div></div>
+                        <div class="border m-5 bg-white dark:text-white dark:bg-slate-800 dark:border-slate-800"><div style="height: 300px;"></div></div>
                        
                     </div>
                 </div>
@@ -118,19 +153,92 @@
         </div>
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
+            tailwind.config = {
+                content: ["./*.html"],
+                theme: {
+                extend: {
+                    colors: {
+                    primary: {
+                        blue: {
+                        light: "#00ccdd"
+                        }
+                    }
+                    }
+                }
+                },
+                darkMode: "class"
+            };
+        </script>
+        <script>
             let options = document.querySelector('#options');
             let balance = document.querySelector('#balance');
 
             let flag = true;
 
             balance.addEventListener('click', e => {
-                // options.classList.add('h-2/2');
                 if(flag)
                     options.classList.remove('h-0');
                 else 
                     options.classList.add('h-0')
             
                 flag = !flag;
+            })
+
+            let htmlpage = document.querySelector('html')
+
+            document.querySelector('#lightButton').addEventListener('click', () => toggleTheme())
+
+            function toggleTheme() {
+                let icon = document.querySelector('#lightButton > i.material-icons');
+
+                if(localStorage.theme == 'dark') {
+                    
+                    if(htmlpage.classList.contains('dark'))
+                        htmlpage.classList.remove('dark');
+
+                    localStorage.theme = '';
+                    icon.innerText = 'wb_sunny'
+                    return;
+                }
+
+                icon.innerText = 'brightness_2'
+                htmlpage.classList.add('dark')
+                localStorage.theme = 'dark'
+            }
+
+
+            if(localStorage.theme == 'dark') {
+                htmlpage.classList.add('dark');
+                let icon = document.querySelector('#lightButton > i.material-icons');
+                icon.innerText = 'brightness_2'
+            }
+
+            let togglePerfil = true;
+
+            document.querySelector('#perfil-mobile').addEventListener('click', event => {
+                
+                let sidebar = document.querySelector('#sideBar')
+                
+                if(togglePerfil) {
+                    let el = sidebar.children[0];
+
+                    el.style.overflow = 'hidden';
+                    el.style.transition = 'all 0.3s';
+                    el.style.width = '0';
+                    sidebar.style.display = 'block';
+
+                    setTimeout(() => el.style.width = '70%', 100);
+                } else {
+                    let el = sidebar.children[0];
+
+                    el.style.width = '0';
+
+                    setTimeout(() => sidebar.style.display = 'none', 300);
+
+                }
+
+                togglePerfil = !togglePerfil
+                
             })
         </script>
     </body>
