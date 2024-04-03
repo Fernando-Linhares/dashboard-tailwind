@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            html, body
+            {
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body >
+        <div class="lg:flex md:flex sm:block justify-center relative top-30 bg-slate-50">
+            <div class="rounded border lg:h-full w-full">
+                <div class="grid grid-cols-4 " >
+                    <div class="col-span-4 bg-slate-900 p-3 fixed inset-x-0 top-0 z-10">
+                        <div class="text-white flex justify-between">
+                            <div class="p-1">
+                                Brand
+                            </div>
+                            <div class="flex space-x-4">
+                                <button class="rounded hover:bg-slate-700  p-1 flex items-center">
+                                    <i class="material-icons">
+                                        brightness_2
+                                    </i>
+                                </button>
+                                <button class="rounded hover:bg-slate-700 p-1 flex items-center">
+                                    <i class="material-icons">
+                                        search
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="col-span-1 p-2 bg-white">
+                        <div class="h-4/5 w-1/5 mt-20 fixed">
+                            <div class="flex items-center space-x-4 justify-center cursor-pointer">
+                                <div class="bg-slate-800 rounded-full h-12 w-12 flex items-center justify-center">
+                                    <i class="material-icons text-white text-lx">
+                                        person
+                                    </i>
+                                </div>
+                                <div class="text-sm font-sans">
+                                    User name
+                                </div>
+                            </div>
+
+                            <div class="mt-12 ml-6 text-xs">
+                                <div class="flex items-center space-x-4 m-1 p-2 pr-5 hover:bg-slate-100 rounded cursor-pointer">
+                                    <div>
+                                        <i class="material-icons">
+                                            pie_chart
+                                        </i>
+                                    </div>
+                                    <div class="">Dashboard</div>
+                                </div>
+                                <div id="balance" class="flex items-center space-x-4 m-1 p-2 pr-5 hover:bg-slate-100 rounded cursor-pointer">
+                                    <div>
+                                        <i class="material-icons">
+                                            account_balance
+                                        </i>
+                                    </div>
+                                    <div class="col-span-2">Account</div>
+                                </div>
+
+                                <div id="options" class="h-0 overflow-hidden transition-all	delay-150 ease-in-out">
+                                    <div class="flex items-center space-x-4 m-1 ml-5 p-2 pr-5 hover:bg-slate-100 rounded cursor-pointer">
+                                        <div>
+                                            <i class="material-icons">
+                                                remove
+                                            </i>
+                                        </div>
+                                        <div class="col-span-2">Documentation</div>
+                                    </div>
+                                    <div class="flex items-center space-x-4 m-1 ml-5 p-2 pr-5 hover:bg-slate-100 rounded cursor-pointer">
+                                        <div>
+                                            <i class="material-icons">
+                                                remove
+                                            </i>
+                                        </div>
+                                        <div class="col-span-2">Documentation</div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-4 m-1 p-2 pr-5 hover:bg-slate-100 rounded cursor-pointer">
+                                    <div>
+                                        <i class="material-icons">
+                                            attach_money
+                                        </i>
+                                    </div>
+                                    <div class="col-span-2">Wallet</div>
+                                </div>
+                                <div class="flex items-center space-x-4 m-1 p-2 pr-5 hover:bg-slate-100 rounded cursor-pointer">
+                                    <div>
+                                        <i class="material-icons">
+                                            settings
+                                        </i>
+                                    </div>
+                                    <div class="col-span-2">Settings</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-2 p-2 border rounded m-5 mt-20 bg-white" >
+                        <div style="height: 1300px;"></div>
+                    </div>
+                    <div class="col-span-1 p-2 mt-20">
+                        
+                        <div class="border m-5 bg-white"><div style="height: 300px;"></div></div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            let options = document.querySelector('#options');
+            let balance = document.querySelector('#balance');
+
+            let flag = true;
+
+            balance.addEventListener('click', e => {
+                // options.classList.add('h-2/2');
+                if(flag)
+                    options.classList.remove('h-0');
+                else 
+                    options.classList.add('h-0')
+            
+                flag = !flag;
+            })
+        </script>
+    </body>
+</html>
