@@ -12,24 +12,33 @@
             }
         </style>
     </head>
-    <body >
+    <body>
         <div class="lg:flex md:flex sm:block justify-center relative top-30 bg-slate-50 dark:bg-slate-900">
             <div class="rounded  lg:h-full w-full">
                 <div class="grid grid-cols-4 " >
                     <div class="col-span-4 bg-slate-900 p-3 fixed inset-x-0 top-0 z-10 dark:bg-slate-700">
                         <div class="text-white flex justify-between">
                             <div class="p-1 font-sans">
-                                4Peer
+                                Brand
                             </div>
                             <div class="flex space-x-4">
+                                <input type="text" id="search-content" name="search-content"
+                                class="
+                                    focus:outline-none
+                                    text-black
+                                    rounded
+                                    p-1
+                                    text-xs
+                                    hidden
+                                ">
+                                <button class="rounded hover:bg-slate-700 p-1 flex items-center" id="searchbutton">
+                                    <i class="material-icons">
+                                        search
+                                    </i>
+                                </button>
                                 <button class="rounded hover:bg-slate-700  p-1 flex items-center" id="lightButton">
                                     <i class="material-icons">
                                         wb_sunny
-                                    </i>
-                                </button>
-                                <button class="rounded hover:bg-slate-700 p-1 flex items-center">
-                                    <i class="material-icons">
-                                        search
                                     </i>
                                 </button>
                             </div>
@@ -46,8 +55,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-1 p-2 bg-white max-sm:hidden " id="sideBar">
-                        <div class="h-4/5 w-1/5 mt-20 fixed dark:bg-stone-700">
+                    <div class="col-span-1 p-2 bg-white dark:bg-slate-800 max-sm:hidden" id="sideBar">
+                        <div class="h-4/5 w-1/5 mt-20 fixed dark:max-sm:bg-slate-900 max-sm:bg-slate-200 left-0 max-sm:h-full">
                             <div class="flex items-center space-x-4 justify-center cursor-pointer max-sm:hidden">
                                 <div class="bg-slate-700 rounded-full h-12 w-12 flex items-center justify-center">
                                     <i class="material-icons text-white text-lx">
@@ -59,8 +68,19 @@
                                 </div>
                             </div>
 
-                            <div class="mt-12 ml-6 text-xs">
-                                <div class="flex items-center space-x-4 m-1 p-2 pr-5 hover:bg-slate-100 rounded cursor-pointer dark:text-white dark:hover:bg-slate-700">
+                            <div class="mt-12 ml-6 text-xs max-sm:mt-20">
+                                <div class="
+                                    flex
+                                    items-center
+                                    space-x-4
+                                    m-1
+                                    p-2
+                                    pr-5
+                                    hover:bg-slate-100
+                                    rounded cursor-pointer
+                                    dark:text-white
+                                    dark:hover:bg-slate-700
+                                ">
                                     <div>
                                         <i class="material-icons">
                                             pie_chart
@@ -238,8 +258,16 @@
                 }
 
                 togglePerfil = !togglePerfil
-                
             })
+
+            document.querySelector('#searchbutton').addEventListener('click', event => {
+                let sc = document.querySelector('#search-content');
+                sc.style.transition = 'all 0.3s'
+                sc.classList.remove('hidden');
+                sc.style.width = '0'
+                setTimeout(()=>sc.style.width = '100%', 50);
+
+            });
         </script>
     </body>
 </html>
